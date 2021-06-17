@@ -1,0 +1,14 @@
+trigger ContactTrigger on Contact (after delete,after update, after insert, after undelete) {
+    if(trigger.isInsert){
+        ContactTriggerHandler.conInsert(Trigger.New);
+    }
+    else if(trigger.isDelete){
+        ContactTriggerHandler.conDelete(Trigger.Old);
+    }
+    else if(trigger.isUnDelete){
+        ContactTriggerHandler.conUndelete(Trigger.New);
+    }
+    else if(trigger.isUpdate){
+        ContactTriggerHandler.conUpdate(Trigger.New,Trigger.Oldmap);
+    }
+}
