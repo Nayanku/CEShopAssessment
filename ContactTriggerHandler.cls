@@ -1,3 +1,8 @@
+//==========================================
+// Author: Nayan Kumar
+// Date:   16 June 2021
+//==========================================
+
 public class ContactTriggerHandler {
     static set<id> accIdSet = new Set<Id>();
     Static List<Account> accList = new List<Account>();
